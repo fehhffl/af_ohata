@@ -19,18 +19,9 @@ javac src/calculadora/*.java
 java -cp src calculadora.TesteCalculadora
 ```
 
-## Resultado dos Testes
+## Resultado dos Test
+<img width="608" height="147" alt="Screenshot 2025-11-28 at 23 44 41 2 2" src="https://github.com/user-attachments/assets/e2fa50c0-93c0-4c33-8c64-5d563fe7b841" />
 
-```
-Resultado = 5
-Resultado = 6
-Resultado = 15
-Resultado = 4
-Erro: divisao por zero, operacao irregular
-Resultado = 0
-Operacao invalida
-Resultado = 0
-```
 
 ## Observações
 - O código utiliza estrutura if-else encadeada para determinar a operação
