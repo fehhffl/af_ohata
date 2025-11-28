@@ -5,12 +5,21 @@ public class TesteCalculadora {
     public static void main(String[] args) {
         Calculadora calc = new Calculadora();
 
-        // testes rapidos
-        calc.calc(2, 3, "+");  // esperado: 5
-        calc.calc(10, 4, "-"); // esperado: 6
-        calc.calc(3, 5, "*");  // esperado: 15
-        calc.calc(8, 2, "/");  // esperado: 4
-        calc.calc(8, 0, "/");  // divisao por zero
-        calc.calc(5, 5, "x");  // operacao invalida
+        System.out.println(calc.calcular(2, 3, "+"));  // esperado: 5
+        System.out.println(calc.calcular(10, 4, "-")); // esperado: 6
+        System.out.println(calc.calcular(3, 5, "*"));  // esperado: 15
+        System.out.println(calc.calcular(8, 2, "/"));  // esperado: 4
+
+        try {
+            System.out.println(calc.calcular(8, 0, "/")); // excecao
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            System.out.println(calc.calcular(5, 5, "x")); // excecao
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

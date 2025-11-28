@@ -1,11 +1,19 @@
-# Calculadora - Versão Inicial
+# Calculadora - Versão Refatorada
 
 ## Descrição
-Este projeto contém a implementação inicial de uma calculadora simples em Java.
+Este projeto contém a implementação refatorada de uma calculadora em Java, aplicando princípios SOLID e boas práticas de programação.
 
 ## Estrutura
-- `src/calculadora/Calculadora.java` - Classe principal com o método calc
-- `src/calculadora/TesteCalculadora.java` - Classe de teste
+- `src/calculadora/Calculadora.java` - Classe principal refatorada com métodos separados
+- `src/calculadora/TesteCalculadora.java` - Classe de teste com tratamento de exceções
+- `docs/` - Documentação JavaDoc do projeto
+
+## Melhorias Aplicadas
+- **Separação de responsabilidades**: Cada operação tem seu próprio método
+- **Métodos puros**: Sem efeitos colaterais
+- **Tratamento de exceções**: Uso de IllegalArgumentException
+- **Switch expression**: Substituindo if-else encadeados
+- **Documentação JavaDoc**: Documentação completa dos métodos
 
 ## Compilação e Execução
 
@@ -19,20 +27,24 @@ javac src/calculadora/*.java
 java -cp src calculadora.TesteCalculadora
 ```
 
-## Resultado dos Testes
-
-```
-Resultado = 5
-Resultado = 6
-Resultado = 15
-Resultado = 4
-Erro: divisao por zero, operacao irregular
-Resultado = 0
-Operacao invalida
-Resultado = 0
+## Gerar JavaDoc
+```bash
+javadoc -d docs src/calculadora/*.java
 ```
 
-## Observações
-- O código utiliza estrutura if-else encadeada para determinar a operação
-- A variável de resultado `r` é uma variável de instância pública
-- Mensagens de erro são impressas diretamente no console
+## Resultado dos Testes Após Refatoração
+
+```
+5
+6
+15
+4
+Divisao por zero nao e permitida
+Operador invalido: x
+```
+
+## Comparação com Versão Inicial
+- **Antes**: Código com if-else encadeados e variável de instância pública
+- **Depois**: Métodos separados, switch expression, métodos puros sem efeitos colaterais
+- **Tratamento de erros**: De println para exceções
+- **Documentação**: JavaDoc completo em todos os métodos
