@@ -33,15 +33,9 @@ javadoc -d docs src/calculadora/*.java
 ```
 
 ## Resultado dos Testes Após Refatoração
+<img width="638" height="121" alt="Screenshot 2025-11-28 at 23 50 58 2" src="https://github.com/user-attachments/assets/8727d48a-b8a7-42c2-900e-e0b5f3409f3b" />
 
-```
-5
-6
-15
-4
-Divisao por zero nao e permitida
-Operador invalido: x
-```
+
 
 ## Comparação com Versão Inicial
 - **Antes**: Código com if-else encadeados e variável de instância pública
